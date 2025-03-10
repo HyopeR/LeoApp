@@ -1,0 +1,15 @@
+{
+  "appId": "com.leo.app",
+  "files": ["dist-app", "dist-web"],
+  "icon": "./public/symbol.png",
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Utility"
+  },
+  "win": {
+    "target": ["portable", "msi"]
+  }
+}

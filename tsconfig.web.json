@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.web.tsbuildinfo",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "target": "ESNext",
+    "rootDir": "./src/web",
+    "outDir": "./dist-web",
+    "baseUrl": "./src/web",
+
+    /* Config */
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": false,
+    "jsx": "react-jsx",
+  },
+  "include": ["src/web", "global.d.ts"],
+  "exclude": ["src/app"]
+}
