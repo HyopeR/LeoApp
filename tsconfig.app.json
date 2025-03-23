@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "composite": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -15,13 +14,14 @@
     /* Config */
     "strict": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
-    "useDefineForClassFields": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "esModuleInterop": false,
-    "moduleDetection": "force",
+
+    // TODO Development Environment;
+    // TODO 1: dist-app -> development -> ".ts" not convert ".js"
+    // TODO 1 THINK: NodeNext with .ts import research.
+    // TODO 2: dist-app -> development -> "@app" absolute path not convert relative.
+    // TODO 2 THINK: Maybe ts-node, tsconfig and bash usage resolve this.
+    // "allowImportingTsExtensions": true,
+    // "noEmit": true,
   },
   "include": ["src/app", "global.d.ts"],
   "exclude": ["src/web", "node_modules"]
