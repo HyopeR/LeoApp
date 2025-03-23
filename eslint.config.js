@@ -24,6 +24,7 @@ export default eslintTypescript
       },
       rules: {
         ...eslintReactHooks.configs.recommended.rules,
+        '@typescript-eslint/no-unused-vars': 'warn',
         'react-refresh/only-export-components': [
           'warn',
           { allowConstantExport: true },

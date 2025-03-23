@@ -6,10 +6,15 @@ export default defineConfig({
   plugins: [react()],
   base: './',
   build: {
-    outDir: 'dist-web',
+    outDir: './dist-web',
   },
   server: {
     port: 5001,
     strictPort: true,
+  },
+  resolve: {
+    alias: {
+      '@web': '/src/web',
+    },
   },
 });
