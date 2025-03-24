@@ -6,11 +6,11 @@
   "main": "dist-app/main.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:web dev:app",
-    "dev:web": "tsc --project tsconfig.web.json && cross-env NODE_ENV=development vite",
-    "dev:app": "tsc --project tsconfig.app.json && cross-env NODE_ENV=development electron .",
+    "dev:web": "bash tools/web.sh && cross-env NODE_ENV=development vite",
+    "dev:app": "bash tools/app.sh && cross-env NODE_ENV=development electron .",
     "build": "npm-run-all --parallel build:web build:app",
-    "build:web": "tsc --project tsconfig.web.json && vite build",
-    "build:app": "tsc --project tsconfig.app.json",
+    "build:web": "bash tools/web.sh && vite build",
+    "build:app": "bash tools/app.sh",
     "build:mac": "npm run build:app && electron-builder --mac --arm64",
     "build:win": "npm run build:app && electron-builder --win --x64",
     "build:linux": "npm run build:app && electron-builder --linux --x64",
@@ -18,11 +18,15 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "os-utils": "^0.0.14",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "ts-mixer": "^6.0.4"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.26.0",
     "@eslint/js": "^9.21.0",
+    "@types/os-utils": "^0.0.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
@@ -37,8 +41,10 @@
     "globals": "^15.15.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.5.3",
+    "tsc-alias": "^1.8.11",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
+    "typescript-transform-paths": "^3.5.5",
     "vite": "^6.2.0"
   }
 }

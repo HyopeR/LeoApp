@@ -1,6 +1,7 @@
 import { app, BrowserWindow } from 'electron';
-import { isDev } from './utils.js';
 import * as path from 'node:path';
+import { isDev } from '@app/utils.js';
+import { ResourceModule } from '@app/services/index.js';
 
 app.on('ready', () => {
   const window = new BrowserWindow({});
@@ -10,4 +11,6 @@ app.on('ready', () => {
   } else {
     window.loadFile(path.join(app.getAppPath(), '/dist-web/index.html'));
   }
+
+  ResourceModule.start();
 });
