@@ -1,2 +1,2 @@
 #!/bin/bash
-ts-node --project tsconfig.app.json -r tsconfig-paths/register "$@"
+tsc --project tsconfig.app.json && tsc-alias --project tsconfig.app.json $@

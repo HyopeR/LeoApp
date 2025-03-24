@@ -1,3 +1,3 @@
 import ResourceManager from './ResourceManager.js';
 
-export { ResourceManager };
+export const ResourceModule = ResourceManager.getInstance();
